@@ -16,14 +16,26 @@
   </div>
 </div>
 
-<%= form_for(Message.new) do |f| %>
-  <span class="label label-info">  名前:</span>
-  <%= f.text_area :name ,:size => "50*1" %>
 
-  <b>内容:</b>
-  <%= f.text_area :body ,:size => "50*1" %>
-  <br/>
-  <br/>
-  <%= f.submit class: "btn btn-sm btn-primary" %>
-  
-<% end %>
+
+<div class="form-horizontal">
+    <%= form_for(Message.new) do |f| %>
+        <div class="form-group">
+            <label for="name" class="col-xs-2 control-label" >名前:</label>
+                <div class="col-xs-10">
+                  <%= f.text_area :name , class: "form-control" %>
+                </div>
+        </div>
+        <div class="form-group">
+             <label for="name" class="col-xs-2 control-label">内容:</label>
+                <div class="col-xs-10">
+                    <%= f.text_area :body , class: "form-control" %>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-xs-offset-2 col-xs-10">
+                    <%= f.submit class: "btn btn-sm btn-primary" %>
+                </div>
+            </div>
+    <% end %>
+</div>
