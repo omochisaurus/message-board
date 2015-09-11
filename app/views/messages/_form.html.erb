@@ -12,10 +12,27 @@
     </div>
   <% end %>
 
-  名前:
-  <%= f.text_field :name %>
 
-  内容:
-  <%= f.text_field :body %>
+
+
+  <div class="input-group col-xs-6">
+    <span class="input-group-addon" id="basic-addon1">名前</span>
+      <%= f.text_field :name  ,:required => "true" ,:placeholder => "お名前", class: "form-control" %>
+  </div>
+<br/>
+  <div class="input-group col-xs-6">
+    <span class="input-group-addon">年齢</span>
+        <%= f.text_field :age  ,:required => "true" ,:pattern => "^[0-9]+$" ,:placeholder => "20" ,class: "form-control" %>
+    <span class="input-group-addon">歳</span>
+  </div>
+<br/>
+  <div class="input-group col-xs-6">
+    <span class="input-group-addon" id="basic-addon1">内容</span>
+      <%= f.text_area :body  ,:required => "true" ,:placeholder => "メッセージをいれてください", class: "form-control" %>
+  </div>
+<br/>
+  <div>
   <%= f.submit class: "btn btn-sm btn-primary" %>
+  </div>
 <% end %>
+
