@@ -22,7 +22,7 @@
 <br/>
   <div class="input-group col-xs-6">
     <span class="input-group-addon">年齢</span>
-        <%= f.text_field :age  ,:required => "true" ,:pattern => "^[0-9]+$" ,:placeholder => "20" ,class: "form-control" %>
+        <%= f.text_field :age  ,:required => "true" ,:pattern => "^[0-9]+$" ,:min => "0"   ,:placeholder => "20" ,class: "form-control" %>
     <span class="input-group-addon">歳</span>
   </div>
 <br/>
